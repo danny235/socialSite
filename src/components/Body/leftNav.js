@@ -1,24 +1,29 @@
 import React from "react";
 import {
-  bookmarkIcon,
   businessManImg,
-  feedSmall,
+  editIcon,
+  goldPinIcon,
   graySearchIcon,
   imagesIcon,
+  metroSmallPinIcon,
   rsFeed,
   savedIcon,
   settingsSmallIcon,
 } from "../../assets";
 import { colors } from "../../assets/Colors";
 import {
+  BorderDiv,
   ColoredBtn,
   DarkSection,
+  Ellipse,
   GrayBtn,
   IconBadge,
   SecondaryBtn,
   WhiteBoxSection,
   WhiteSection,
+  WhiteToastSection,
 } from "../../styledItems/styledItems";
+import { GalleryIcon, RefferalIcon } from "../Icons/icons";
 
 function Left() {
   const listItems = ["Feeds", "Gallery", "Settings", "Referral", "Saved"];
@@ -26,31 +31,31 @@ function Left() {
     {
       id: 1,
       title: "Business name",
-      name: "Business Page"
+      name: "Business Page",
     },
     {
       id: 2,
       title: "Business name",
-      name: "Business Page"
+      name: "Business Page",
     },
     {
       id: 3,
       title: "Business name",
-      name: "Profile seller"
+      name: "Profile seller",
     },
     {
       id: 4,
       title: "Business name",
-      name: "Profile seller"
+      name: "Profile seller",
     },
-  ]
+  ];
   const ImageCheck = (val) => {
     switch (val) {
       case "Feeds":
         return <img style={styles.imageStyle} src={rsFeed} alt="Feeds" />;
         break;
       case "Gallery":
-        return <img style={styles.imageStyle} src={imagesIcon} alt="Gallery" />;
+        return <GalleryIcon style={{ width: 10, height: 10 }} />;
         break;
       case "Settings":
         return (
@@ -62,9 +67,7 @@ function Left() {
         );
         break;
       case "Referral":
-        return (
-          <img style={styles.imageStyle} src={imagesIcon} alt="Referral" />
-        );
+        return <RefferalIcon />;
         break;
       case "Saved":
         return <img style={styles.imageStyle} src={savedIcon} alt="Saved" />;
@@ -78,20 +81,19 @@ function Left() {
       style={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
-        width: 270,
+        width: 350,
         alignItems: "center",
-        padding: 50,
+        padding: 20,
       }}
     >
       <WhiteSection
         style={{
-          marginBottom: 10,
+          marginBottom: 20,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          width: '100%',
-          padding: 10
+          width: "100%",
+          padding: 10,
         }}
       >
         <h3 style={styles.accountSwitchText}>Switch Account</h3>
@@ -102,6 +104,7 @@ function Left() {
               alignItems: "center",
               justifyContent: "center",
               width: "100%",
+              paddingTop: 10,
             }}
           >
             <p>Social</p>
@@ -113,6 +116,7 @@ function Left() {
               alignItems: "center",
               justifyContent: "center",
               width: "100%",
+              paddingTop: 10,
             }}
           >
             <p>Business</p>
@@ -120,10 +124,22 @@ function Left() {
           </GrayBtn>
         </div>
       </WhiteSection>
-      <DarkSection style={{ marginBottom: 50, padding: 15, paddingBottom: 30 }}>
+      <DarkSection
+        style={{
+          marginBottom: 50,
+          padding: 15,
+          paddingBottom: 30,
+          width: "100%",
+        }}
+      >
         {listItems.map((item, idx) => (
           <div
-            style={{ display: "flex", alignItems: "center", marginBottom: 4 }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginBottom: 18,
+              height: 30,
+            }}
             key={idx}
           >
             {ImageCheck(item)}
@@ -132,6 +148,7 @@ function Left() {
                 color: item === "Feeds" ? colors.gold : colors.white,
                 fontSize: 15,
                 fontWeight: 400,
+                marginTop: 25,
               }}
             >
               {item}
@@ -139,42 +156,122 @@ function Left() {
           </div>
         ))}
       </DarkSection>
-      <WhiteBoxSection style={{display: "flex", flexDirection: "column"}}>
-        <div style={{display: "flex", marginBottom: 10, padding: 10}}>
+      <WhiteBoxSection
+        style={{ display: "flex", flexDirection: "column", width: "100%" }}
+      >
+        <div style={{ display: "flex", marginBottom: 10, padding: 15 }}>
           <h3
             style={{
               ...styles.accountSwitchText,
               fontSize: 17,
               fontWeight: 400,
-              flex: 1
+              flex: 1,
             }}
           >
             My Pages
           </h3>
-          <SecondaryBtn style={{width: 90}}>Create new</SecondaryBtn>
+          <SecondaryBtn style={{ width: 90 }}>Create new</SecondaryBtn>
         </div>
-        <div style={{dipslay: "flex", justifyContent: "center", alignItems: "center", width: 250, padding: 10}}>
+        <div
+          style={{
+            dipslay: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            padding: 10,
+          }}
+        >
+          <div style={styles.searchBox}>
+            <img
+              style={{ width: 15, height: 15, marginRight: 4 }}
+              src={graySearchIcon}
+              alt="search pages"
+            />
+            <p style={{marginTop: 10}}>Search Pages</p>
+          </div>
+        </div>
+        <div style={{ width: "100%" }}>
+          {businessNames.map(({ id, title, name }) => (
+            <div style={styles.businessContainer} key={id}>
+              <img
+                src={businessManImg}
+                style={{ width: 40, height: 40, marginRight: 9 }}
+                alt="profile"
+              />
+              {id === 1 && (
+                <WhiteToastSection
+                  style={{ right: -70, top: 140, width: 130, height: 80 }}
+                >
+                  <BorderDiv>
+                  <img style={{width: 10, height: 10, marginRight: 8, marginLeft: 8}} src={goldPinIcon} alt="pin" />
+                    <p style={styles.styledPee}>Pin</p>
+                  </BorderDiv>
+                  <BorderDiv>
+                  <img style={{width: 10, height: 10, marginRight: 8, marginLeft: 8}} src={editIcon} alt="edit" />
+                    <p style={styles.styledPee}>Edit Page</p>
+                  </BorderDiv>
+                </WhiteToastSection>
+              )}
+              <div style={{ display: "flex" }}>
+                <div
+                  style={{
+                    display: "flex",
 
-        <div style={styles.searchBox}>
-          <img style={{width:15, height: 15, marginRight: 4}} src={graySearchIcon} alt="search pages" />
-          <p>Search Pages</p>
-        </div>
-        </div>
-        <div>
-
-          {
-            businessNames.map(({id, title, name})=> (
-              <div style={styles.businessContainer} key={id}>
-                <img src={businessManImg} style={{width: 40, height: 40, marginRight: 9}} alt="profile" />
-                <div>
-                  <div>
-                    <p>{title}</p>
+                    justifyContent: "center",
+                    width: "100%",
+                    position: "relative",
+                    flexDirection: "column",
+                    padding: 3,
+                  }}
+                >
+                  <p
+                    style={{
+                      flex: 1,
+                      fontSize: 15,
+                      color: colors.secondary,
+                      fontWeight: 400,
+                      marginBottom: 5,
+                    }}
+                  >
+                    {title}
+                  </p>
+                  <p
+                    style={{
+                      fontSize: 12,
+                      fontWeight: 400,
+                      color: "#ccc",
+                    }}
+                  >
+                    {name}
+                  </p>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    height: 48,
+                  }}
+                >
+                  <div
+                    style={{ display: "flex", padding: 9, marginBottom: 10 }}
+                  >
+                    <Ellipse bgcolor={colors.secondary} />
+                    <Ellipse bgcolor={colors.secondary} />
+                    <Ellipse bgcolor={colors.secondary} />
                   </div>
-                  <p>{name}</p>
+                  <div>
+                    <img
+                      style={{ width: 10, height: 14 }}
+                      src={metroSmallPinIcon}
+                      alt="pin"
+                    />
+                  </div>
                 </div>
               </div>
-            ))
-          }
+            </div>
+          ))}
         </div>
       </WhiteBoxSection>
     </div>
@@ -190,17 +287,17 @@ const styles = {
     marginBottom: 3,
   },
   imageStyle: {
-    width: 25,
-    height: 30,
+    width: 28,
+    height: 27,
     marginRight: 15,
   },
   searchBox: {
     backgroundColor: "#ccc",
     color: colors.gray,
     borderRadius: 20,
-    width: "93%",
+    width: "100%",
     padding: 10,
-    height: 20,
+    height: 30,
     display: "flex",
     alignItems: "center",
     marginRight: 7,
@@ -211,11 +308,14 @@ const styles = {
   businessContainer: {
     backgroundColor: "#eee",
     display: "flex",
-    padding: 10,
     height: 60,
-    width: 250,
+    width: "100%",
     marginBottom: 5,
-    alignItems: "center"
+    alignItems: "center",
+    padding: 10,
+  },
+  styledPee: {
+    marginTop: 10
   }
 };
 

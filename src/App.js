@@ -13,7 +13,7 @@ function App() {
         flexDirection: "column",
         justifyItems: "center",
         backgroundColor: "#e4e4e4",
-        height: "200vh",
+        height: "300vh",
       }}
     >
       <Header />

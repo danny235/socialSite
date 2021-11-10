@@ -34,12 +34,7 @@ import metroSmallPinIcon from "./meeney-assets/img/icon-metro-pin@1x.png";
 import businessManImg from "./meeney-assets/img/ellipse-95-1@1x.png";
 import metroLargePinIcon from "./meeney-assets/img/icon-metro-pin-1@1x.png";
 import lineOneIcon from "./meeney-assets/img/line-4@1x.png";
-import lineTwoIcon from "./meeney-assets/img/line-5@1x.png";
-import lineThreeIcon from "./meeney-assets/img/line-8@1x.png";
-import lineFourIcon from "./meeney-assets/img/line-17@1x.png";
-import lineFiveIcon from "./meeney-assets/img/line-19@1x.png";
-import lineSixIcon from "./meeney-assets/img/line-75@1x.png";
-import lineSevenIcon from "./meeney-assets/img/line-77@1x.png";
+
 import straightLineIcon from "./meeney-assets/img/line-35@1x.png";
 import searchIconSmall from "./meeney-assets/img/path-99@1x.png";
 import feedSmall from "./meeney-assets/img/path-108@1x.png";
@@ -49,6 +44,20 @@ import settingsSmallIcon from "./meeney-assets/img/path-110@1x.png";
 import savedIcon from "./meeney-assets/img/path-112@1x.png";
 import whiteBookmark from "./meeney-assets/img/bookmark-24px@1x.png";
 import graySearchIcon from "./meeney-assets/img/path-99@1x.png";
+import galleryOneIcon from "./meeney-assets/img/path-337@1x.png";
+import galleryTwoIcon from "./meeney-assets/img/path-339@1x.png";
+import galleryThreeIcon from "./meeney-assets/img/path-338@1x.png";
+import refferalOneIcon from "./meeney-assets/img/path-225@1x.png";
+import refferalTwoIcon from "./meeney-assets/img/path-226@1x.png";
+import refferalThreeIcon from "./meeney-assets/img/path-227@1x.png";
+import refferalFourIcon from "./meeney-assets/img/path-229@1x.png";
+import refferalFiveIcon from "./meeney-assets/img/path-228@1x.png";
+import copyOneIcon from "./meeney-assets/img/path-205@1x.png";
+import copyTwoIcon from "./meeney-assets/img/path-207@1x.png";
+import copyThreeIcon from "./meeney-assets/img/path-206@1x.png";
+import addOneIcon from "./meeney-assets/img/path-332@1x.png";
+import addTwoIcon from "./meeney-assets/img/path-333@1x.png";
+import addThreeIcon from "./meeney-assets/img/path-334@1x.png";
 
 
 
@@ -85,12 +94,6 @@ export {
   pinIconSmall,
   goldPinIcon,
   lineOneIcon,
-  lineTwoIcon,
-  lineThreeIcon,
-  lineFourIcon,
-  lineFiveIcon,
-  lineSixIcon,
-  lineSevenIcon,
   straightLineIcon,
   searchIconSmall,
   feedSmall,
@@ -102,5 +105,19 @@ export {
   graySearchIcon,
   metroLargePinIcon,
   metroSmallPinIcon,
-  businessManImg
+  businessManImg,
+  galleryOneIcon,
+  galleryTwoIcon,
+  galleryThreeIcon,
+  refferalOneIcon,
+  refferalTwoIcon,
+  refferalThreeIcon,
+  refferalFourIcon,
+  refferalFiveIcon,
+  copyOneIcon,
+  copyTwoIcon,
+  copyThreeIcon,
+  addOneIcon,
+  addTwoIcon,
+  addThreeIcon
 };

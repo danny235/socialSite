@@ -60,7 +60,7 @@ function Header() {
           </div>
           <SearchDiv>
             <img style={styles.imageNot} src={headerSearch} />
-            <p>Search</p>
+            <p style={{marginTop: 10}}>Search</p>
           </SearchDiv>
           <div
             style={{
@@ -92,6 +92,7 @@ const styles = {
     flexDirection: "row",
     alignItems: "center",
     justifyContents: "center",
+    width: "100%"
   },
   imageContainer: {
     display: "flex",
