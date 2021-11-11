@@ -23,7 +23,7 @@ import {
   WhiteSection,
   WhiteToastSection,
 } from "../../styledItems/styledItems";
-import { GalleryIcon, RefferalIcon } from "../Icons/icons";
+import { AddIcon, GalleryIcon, RefferalIcon } from "../Icons/icons";
 
 function Left() {
   const listItems = ["Feeds", "Gallery", "Settings", "Referral", "Saved"];
@@ -137,8 +137,8 @@ function Left() {
             style={{
               display: "flex",
               alignItems: "center",
-              marginBottom: 18,
-              height: 30,
+              marginBottom: 8,
+            
             }}
             key={idx}
           >
@@ -170,7 +170,13 @@ function Left() {
           >
             My Pages
           </h3>
-          <SecondaryBtn style={{ width: 90 }}>Create new</SecondaryBtn>
+          <SecondaryBtn style={{ width: 90, display:"flex", alignItems:"center", padding: 10 }}>
+            <AddIcon />
+            <p style={{fontSize: 10, paddingTop: 10}}>
+
+            Create new
+            </p>
+            </SecondaryBtn>
         </div>
         <div
           style={{

@@ -29,6 +29,7 @@ import {
   WhiteInputSection,
   WhiteToastSection,
 } from "../../styledItems/styledItems";
+import { CopyIcon } from "../Icons/icons";
 
 const Feed = ({ show }) => {
   return (
@@ -38,22 +39,39 @@ const Feed = ({ show }) => {
           style={{ right: 12, top: 10, width: 130, height: 200 }}
         >
           <BorderDiv>
-            <img style={{width: 10, height: 10, marginRight: 8, marginLeft: 8}} src={eyeIcon} alt="hide" />
+            <img
+              style={{ width: 10, height: 10, marginRight: 8, marginLeft: 8 }}
+              src={eyeIcon}
+              alt="hide"
+            />
             <p style={styles.styledPee}>Hide</p>
           </BorderDiv>
-          <BorderDiv>
-            <p style={styles.styledPee}>Copy link</p>
+          <BorderDiv style={{paddingLeft: 10}}>
+            <CopyIcon />
+            <p style={{...styles.styledPee, marginLeft: 2,paddingTop: 5}}>Copy link</p>
           </BorderDiv>
           <BorderDiv>
-            <img style={{width: 10, height: 10, marginRight: 8, marginLeft: 8}} src={pinIconSmall} alt="pin" />
+            <img
+              style={{ width: 10, height: 10, marginRight: 8, marginLeft: 8 }}
+              src={pinIconSmall}
+              alt="pin"
+            />
             <p style={styles.styledPee}>Pin</p>
           </BorderDiv>
           <BorderDiv>
-            <img style={{width: 10, height: 10, marginRight: 8, marginLeft: 8}} src={reportIconSmall} alt="pin" />
+            <img
+              style={{ width: 10, height: 10, marginRight: 8, marginLeft: 8 }}
+              src={reportIconSmall}
+              alt="pin"
+            />
             <p style={styles.styledPee}>Report Post</p>
           </BorderDiv>
           <BorderDiv>
-            <img style={{width: 10, height: 10, marginRight: 8, marginLeft: 8}} src={deleteIcon} alt="delete" />
+            <img
+              style={{ width: 10, height: 10, marginRight: 8, marginLeft: 8 }}
+              src={deleteIcon}
+              alt="delete"
+            />
             <p style={styles.styledPee}>Delete post</p>
           </BorderDiv>
         </WhiteToastSection>
@@ -95,14 +113,14 @@ const Feed = ({ show }) => {
             </div>
           </div>
           <div style={{ marginBottom: 1 }}>
-            <p style={{ fontSize: 13 }}>
+            <p style={{ fontSize: 11 }}>
               is simply dummey text of the printing and typesetting industry.
               Lorem ipsum has been the industry's standard dummy text ever since
               the 1500s. when an unknown printer took a gallery of type and
               scrambled it to make a type specimen book.
             </p>
             <div style={{ padding: 15 }}>
-              <h4 style={{ fontSize: 12, marginBottom: 8 }}>
+              <h4 style={{ fontSize: 10, marginBottom: 8 }}>
                 View all comments
               </h4>
               <div style={{ display: "flex" }}>
@@ -231,11 +249,16 @@ function Main() {
         <WhiteToastSection
           style={{ right: -70, top: 30, width: 130, height: 80 }}
         >
-          <BorderDiv>
+          <BorderDiv style={{paddingLeft: 10}}>
+            <CopyIcon />
             <p style={styles.styledPee}>Copy link</p>
           </BorderDiv>
           <BorderDiv>
-            <img style={{width: 10, height: 10, marginRight: 8, marginLeft: 8}} src={reportIconSmall} alt="pin" />
+            <img
+              style={{ width: 10, height: 10, marginRight: 8, marginLeft: 8 }}
+              src={reportIconSmall}
+              alt="pin"
+            />
             <p style={styles.styledPee}>Report Post</p>
           </BorderDiv>
         </WhiteToastSection>
@@ -401,7 +424,7 @@ const styles = {
     width: "100%",
   },
   peopleImg: {
-    height: 400,
+    height: 370,
     width: "55%",
     marginRight: 20,
   },
@@ -411,8 +434,8 @@ const styles = {
     marginRight: 7,
   },
   styledPee: {
-    marginTop: 10
-  }
+    marginTop: 10,
+  },
 };
 
 export default Main;

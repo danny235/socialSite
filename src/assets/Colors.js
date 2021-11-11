@@ -1,7 +1,8 @@
 export const colors = {
-  lighterSecondary: "#f5caf7",
-  secondary: "#7b027f",
+  lighterSecondary: "#9400B11C",
+  secondary: "#490057",
   white: "#ffffff",
   gray: "#808080",
-  gold: "#FFD700"
+  gold: "#FFD700",
+  lightGray: "#787878"
 };

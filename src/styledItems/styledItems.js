@@ -19,6 +19,23 @@ const MainHeader = styled.div`
   border-radius: 0px 0px 25px 25px;
   padding: 10px 50px 20px 50px;
   margin-bottom: 30px;
+  position: relative;
+`;
+
+const CircleOne = styled.div`
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: ${colors.lighterSecondary};
+  position: absolute;
+`;
+
+const CircleTwo = styled.div`
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: ${colors.lighterSecondary};
 `;
 
 const SearchDiv = styled.div`
@@ -60,7 +77,7 @@ const PinkMainSection = styled.div`
 const DarkSection = styled.div`
   background-color: ${colors.secondary};
   width: 100%;
-  height: 290px;
+  height: 370px;
   border-radius: 10px;
 `;
 const WhiteBoxSection = styled.div`
@@ -141,7 +158,7 @@ const Ellipse = styled.div`
   margin-right: 3px;
 `;
 const WhiteFeedSection = styled.div`
-  height: 450px;
+  height: 410px;
   width: 100%;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -187,7 +204,8 @@ const BorderDiv = styled.div`
   font-weight: 500;
   display: flex;
   align-items: center;
-`
+  width: 100%;
+`;
 
 export {
   MainHeader,
@@ -207,5 +225,7 @@ export {
   TextInput,
   WhiteFeedSection,
   WhiteToastSection,
-  BorderDiv
+  BorderDiv,
+  CircleOne,
+  CircleTwo,
 };

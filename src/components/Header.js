@@ -12,11 +12,13 @@ import {
   unknownOne,
   unknownTwo,
 } from "../assets";
-import { IconBadge, MainHeader, SearchDiv } from "../styledItems/styledItems";
+import { CircleOne, CircleTwo, IconBadge, MainHeader, SearchDiv } from "../styledItems/styledItems";
 
 function Header() {
   return (
     <MainHeader>
+      <CircleOne style={{left: 10, top: -300}} />
+      <CircleTwo style={{left: -200, top: -240}} />
       <div style={styles.headerContainer}>
         <div style={styles.imageContainer}>
           <img style={styles.imageFace} src={headerFace} />
